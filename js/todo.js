@@ -3,6 +3,7 @@ const todoInput = document.querySelector("#todo-add input");
 const todoList = document.querySelector("#todo-list");
 
 const TODOS_KEY = "todos";
+const DELETE_LINE_CLASSNAME = "delete_line";
 
 let todos = [];
 
@@ -17,6 +18,16 @@ function deleteTodo(e) {
     saveTodo();
 }
 
+function handleMouseEnter(e) {
+    const text = e.target.parentElement.children[0];
+    text.classList.add(DELETE_LINE_CLASSNAME);
+}
+
+function handleMouseLeave(e) {
+    const text = e.target.parentElement.children[0];
+    text.classList.remove(DELETE_LINE_CLASSNAME);
+}
+
 function addTodo(newTodo) {
     const li = document.createElement("li");
     const span = document.createElement("span");
@@ -25,6 +36,8 @@ function addTodo(newTodo) {
     button.innerText = "X";
 
     button.addEventListener("click", deleteTodo);
+    button.addEventListener("mouseenter", handleMouseEnter);
+    button.addEventListener("mouseleave", handleMouseLeave);
 
     li.appendChild(span);
     li.appendChild(button);
