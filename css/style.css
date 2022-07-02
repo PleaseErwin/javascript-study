@@ -25,6 +25,7 @@ body {
     color: white;
     background-size: cover;
     background-position: center;
+    background: rgba(none, none, none, 0.8);
     /* background: (0, 0, 0, 0.8); */
     /* top: 0;
     left: 0; */
@@ -64,14 +65,16 @@ input[type="text"]:focus::placeholder {
 
 #login-form {
     position: absolute;
-    top: 55%;
+    top: 58%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-#todo-add {
+#todo-add input {
     position: absolute;
-    top: 63%;
+    width: 10%;
+    height: 20px;
+    top: 66%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -79,9 +82,9 @@ input[type="text"]:focus::placeholder {
 #todo-box {
     position: absolute;
     overflow: auto;
-    max-height: 20%;
+    max-height: 19%;
     min-width: 10%;
-    top: 78%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -104,13 +107,13 @@ input[type="text"]:focus::placeholder {
     list-style: none;
     text-align-last: left;
     padding-left: 0px;
-    padding-right: 10px;
+    padding-right: 20px;
     margin: 0px;
 }
 
 #quote {
     position: absolute;
-    top: 92%;
+    top: 94%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
