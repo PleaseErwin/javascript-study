@@ -3,7 +3,17 @@
 }
 
 .delete_line {
-    text-decoration: line-through
+    text-decoration: line-through;
+}
+
+button {
+    border: none;
+    background: transparent;
+    margin-right: 5px;
+}
+
+.background_img {
+    background-image: "";
 }
 
 body {
@@ -15,7 +25,9 @@ body {
     color: white;
     background-size: cover;
     background-position: center;
-    background: (0, 0, 0, 0.8);
+    /* background: (0, 0, 0, 0.8); */
+    /* top: 0;
+    left: 0; */
 }
 
 #clock {
@@ -28,9 +40,9 @@ body {
 
 #username {
     position: absolute;
-    top: 50%;
+    top: 54%;
     left: 50%;
-    font-size: 150%;
+    font-size: 120%;
     transform: translate(-50%, -50%);
 }
 
@@ -59,23 +71,46 @@ input[type="text"]:focus::placeholder {
 
 #todo-add {
     position: absolute;
-    top: 60%;
+    top: 63%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-#todo-list {
+#todo-box {
     position: absolute;
-    list-style: none;
-    padding-left: 0px;
-    top: 70%;
+    overflow: auto;
+    max-height: 20%;
+    min-width: 10%;
+    top: 78%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+#todo-box::-webkit-scrollbar {
+    width: 5px;
+}
+
+#todo-box::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#todo-box::-webkit-scrollbar-thumb {
+    height: 20%;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+#todo-list {
+    list-style: none;
+    text-align-last: left;
+    padding-left: 0px;
+    padding-right: 10px;
+    margin: 0px;
 }
 
 #quote {
     position: absolute;
-    top: 90%;
+    top: 92%;
     left: 50%;
     transform: translate(-50%, -50%);
 }

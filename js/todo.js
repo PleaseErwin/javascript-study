@@ -12,7 +12,7 @@ function saveTodo() {
 }
 
 function deleteTodo(e) {
-    const li = e.target.parentElement;
+    const li = e.target.parentElement.parentElement;
     todoList.removeChild(li);// li.remove();
     todos = todos.filter(todo => todo.id !== parseInt(li.id));
     saveTodo();
@@ -32,7 +32,11 @@ function addTodo(newTodo) {
     const li = document.createElement("li");
     const button = document.createElement("button");
     const span = document.createElement("span");
-    button.innerText = "X";
+
+    const img = document.createElement("img");
+    img.src = "img/bat.png";
+    img.height = "10";
+    button.appendChild(img);
     span.innerText = newTodo.text;
 
     button.addEventListener("click", deleteTodo);
