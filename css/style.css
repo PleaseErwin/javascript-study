@@ -26,17 +26,24 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    font-size: 100%;
+    font-size: 150%;
     transform: translate(-50%, -50%);
 }
 
 input[type="text"] {
     border: none;
-    border-bottom: 1px;
+    border-bottom: 1px solid white;
     outline: none;
-    border-radius: 15px;
     background: transparent;
     text-align: center;
+    height: 40px;
+    box-sizing: border-box;
+    color: white;
+    font-size: large;
+}
+
+input[type="text"]:focus::placeholder {
+    color: black;
 }
 
 #login-form {
