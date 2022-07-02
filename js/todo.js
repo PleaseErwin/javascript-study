@@ -19,28 +19,28 @@ function deleteTodo(e) {
 }
 
 function handleMouseEnter(e) {
-    const text = e.target.parentElement.children[0];
+    const text = e.target.parentElement.children[1];
     text.classList.add(DELETE_LINE_CLASSNAME);
 }
 
 function handleMouseLeave(e) {
-    const text = e.target.parentElement.children[0];
+    const text = e.target.parentElement.children[1];
     text.classList.remove(DELETE_LINE_CLASSNAME);
 }
 
 function addTodo(newTodo) {
     const li = document.createElement("li");
-    const span = document.createElement("span");
     const button = document.createElement("button");
-    span.innerText = newTodo.text;
+    const span = document.createElement("span");
     button.innerText = "X";
+    span.innerText = newTodo.text;
 
     button.addEventListener("click", deleteTodo);
     button.addEventListener("mouseenter", handleMouseEnter);
     button.addEventListener("mouseleave", handleMouseLeave);
 
-    li.appendChild(span);
     li.appendChild(button);
+    li.appendChild(span);
 
     li.id = newTodo.id;
 
