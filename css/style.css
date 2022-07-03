@@ -4,6 +4,7 @@
 
 .delete_line {
     text-decoration: line-through;
+    text-decoration-thickness: 2px;
 }
 
 button {
@@ -29,6 +30,28 @@ body {
     /* background: (0, 0, 0, 0.8); */
     /* top: 0;
     left: 0; */
+}
+
+#fanfic {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    text-align:left;
+    padding: 5px;
+}
+#fanfic summary {
+    padding-bottom: 5px;
+}
+#fanfic summary::marker {
+    font-size: 0;
+}
+#fanfic a {
+    padding-top: 10px;
+    color: white;
+    text-decoration: none;
+}
+#fanfic a:hover {
+    font-weight: bold;
 }
 
 #clock {
@@ -111,9 +134,14 @@ input[type="text"]:focus::placeholder {
     margin: 0px;
 }
 
-#quote {
+#quote span {
     position: absolute;
+    font-weight: bold;
     top: 94%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+#weather {
+
 }
